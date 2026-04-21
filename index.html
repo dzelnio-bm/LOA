@@ -20,116 +20,37 @@
       --radius:     10px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Source Sans 3', sans-serif;
-      background: var(--blue-pale);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
-      color: white;
-    }
-    .header-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+    body { font-family: 'Source Sans 3', sans-serif; background: var(--blue-pale); color: var(--text-dark); line-height: 1.6; }
+    header { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%); color: white; }
+    .header-inner { max-width: 1140px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
     .header-left { display: flex; align-items: center; gap: 14px; }
     .header-logo { height: 58px; width: auto; border-radius: 6px; }
-    .header-brand h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      line-height: 1.2;
-    }
+    .header-brand h1 { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; line-height: 1.2; }
     .header-brand p { font-size: 0.78rem; opacity: 0.75; font-weight: 300; margin-top: 2px; }
     .header-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .header-actions a {
-      font-size: 0.80rem;
-      color: var(--blue-light);
-      text-decoration: none;
-      padding: 6px 13px;
-      border: 1px solid rgba(255,255,255,0.28);
-      border-radius: 20px;
-      transition: all 0.2s;
-      white-space: nowrap;
-    }
+    .header-actions a { font-size: 0.80rem; color: var(--blue-light); text-decoration: none; padding: 6px 13px; border: 1px solid rgba(255,255,255,0.28); border-radius: 20px; transition: all 0.2s; white-space: nowrap; }
     .header-actions a:hover { background: rgba(255,255,255,0.15); color: white; }
     .header-actions a.cta { background: var(--accent); color: white; border-color: var(--accent); font-weight: 600; }
     .header-actions a.cta:hover { background: #d09010; }
     .site-banner { width: 100%; max-height: 220px; object-fit: cover; object-position: center 30%; display: block; }
     nav { background: var(--blue-dark); border-top: 1px solid rgba(255,255,255,0.10); }
     .nav-inner { max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; }
-    nav a {
-      color: rgba(255,255,255,0.78);
-      text-decoration: none;
-      padding: 11px 17px;
-      font-size: 0.87rem;
-      font-weight: 600;
-      border-bottom: 3px solid transparent;
-      transition: all 0.2s;
-      display: block;
-    }
+    nav a { color: rgba(255,255,255,0.78); text-decoration: none; padding: 11px 17px; font-size: 0.87rem; font-weight: 600; border-bottom: 3px solid transparent; transition: all 0.2s; display: block; }
     nav a:hover { color: white; border-bottom-color: var(--accent); }
-    .page-wrap {
-      max-width: 1140px;
-      margin: 26px auto;
-      padding: 0 16px;
-      display: flex;
-      gap: 26px;
-      align-items: flex-start;
-    }
+    .page-wrap { max-width: 1140px; margin: 26px auto; padding: 0 16px; display: flex; gap: 26px; align-items: flex-start; }
     main { flex: 1; min-width: 0; }
-    .meeting-banner {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, #1e8dc9 100%);
-      color: white;
-      border-radius: var(--radius);
-      padding: 24px 26px;
-      margin-bottom: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-    .meeting-banner::before {
-      content: '';
-      position: absolute;
-      top: -40px; right: -40px;
-      width: 180px; height: 180px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 50%;
-    }
+    .meeting-banner { background: linear-gradient(135deg, var(--blue-dark) 0%, #1e8dc9 100%); color: white; border-radius: var(--radius); padding: 24px 26px; margin-bottom: 22px; position: relative; overflow: hidden; }
+    .meeting-banner::before { content: ''; position: absolute; top: -40px; right: -40px; width: 180px; height: 180px; background: rgba(255,255,255,0.06); border-radius: 50%; }
     .meeting-banner h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 6px; position: relative; }
     .meeting-meta { font-size: 0.87rem; opacity: 0.85; margin-bottom: 16px; font-weight: 300; position: relative; }
     .meeting-dates { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; position: relative; }
-    .meeting-dates li {
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.22);
-      border-radius: 8px;
-      padding: 10px 16px;
-      flex: 1;
-      min-width: 150px;
-    }
+    .meeting-dates li { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22); border-radius: 8px; padding: 10px 16px; flex: 1; min-width: 150px; }
     .meeting-dates li .mdate { font-weight: 600; font-size: 1rem; display: block; }
     .meeting-dates li .mspeaker { font-size: 0.80rem; opacity: 0.88; font-style: italic; display: block; margin-top: 2px; }
     .perks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; position: relative; }
     .perk-tag { background: var(--accent); color: white; border-radius: 20px; padding: 3px 12px; font-size: 0.76rem; font-weight: 600; text-transform: uppercase; }
     .meeting-note { font-size: 0.82rem; opacity: 0.78; font-style: italic; position: relative; }
-    .newsletter-strip {
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 16px 20px;
-      margin-bottom: 22px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+    .newsletter-strip { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
     .nl-thumb { width: 52px; height: 68px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
     .nl-text { flex: 1; min-width: 120px; }
     .nl-label { font-size: 0.70rem; font-weight: 600; color: var(--blue-mid); text-transform: uppercase; letter-spacing: 1.5px; }
@@ -145,22 +66,7 @@
     .slider-item img { width: 120px; height: 156px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.14); display: block; transition: transform 0.2s, box-shadow 0.2s; }
     .slider-item:hover img { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.20); }
     .slider-item .si-label { font-size: 0.76rem; margin-top: 7px; font-weight: 600; color: var(--text-light); }
-    .slider-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-60%);
-      background: var(--blue-dark);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 34px; height: 34px;
-      font-size: 1rem;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      transition: background 0.2s;
-      z-index: 2;
-    }
+    .slider-btn { position: absolute; top: 50%; transform: translateY(-60%); background: var(--blue-dark); color: white; border: none; border-radius: 50%; width: 34px; height: 34px; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: background 0.2s; z-index: 2; }
     .slider-btn:hover { background: var(--blue-mid); }
     .slider-btn.prev { left: 0; }
     .slider-btn.next { right: 0; }
@@ -182,8 +88,6 @@
     .clabel { font-weight: 600; color: var(--blue-dark); min-width: 110px; font-size: 0.82rem; text-transform: uppercase; }
     .join-btn { display: inline-block; margin-top: 16px; background: var(--accent); color: white; text-decoration: none; padding: 11px 26px; border-radius: 6px; font-weight: 600; font-size: 0.90rem; transition: background 0.2s; }
     .join-btn:hover { background: #c8901a; color: white; }
-    .section-btn { display: inline-block; margin-top: 12px; background: var(--blue-light); color: var(--blue-dark); text-decoration: none; padding: 9px 20px; border-radius: 6px; font-weight: 600; font-size: 0.87rem; transition: background 0.2s; }
-    .section-btn:hover { background: #b8dcf0; }
     aside { width: 262px; flex-shrink: 0; }
     .sidebar-section { background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; margin-bottom: 18px; }
     .sidebar-section h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--blue-dark); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-light); }
@@ -196,11 +100,6 @@
     .ap-icon { font-size: 2.2rem; margin-bottom: 10px; }
     .ap-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--blue-dark); font-weight: 700; margin-bottom: 6px; }
     .ap-sub { font-size: 0.76rem; color: var(--text-light); line-height: 1.4; }
-    .quick-links { list-style: none; }
-    .quick-links li { margin-bottom: 7px; }
-    .quick-links a { color: var(--blue-mid); font-size: 0.87rem; text-decoration: none; display: flex; align-items: center; gap: 6px; }
-    .quick-links a::before { content: '→'; color: var(--accent); font-weight: 700; }
-    .quick-links a:hover { color: var(--blue-dark); }
     footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 30px 20px 18px; margin-top: 20px; }
     .footer-inner { max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; margin-bottom: 20px; }
     .footer-brand img { height: 50px; opacity: 0.88; margin-bottom: 8px; display: block; }
@@ -229,15 +128,14 @@
 <header>
   <div class="header-inner">
     <div class="header-left">
-      <img class="header-logo" id="header-logo" src="Logo.png" alt="LOA Logo">
+      <img class="header-logo" src="Logo.png" alt="LOA Logo">
       <div class="header-brand">
-        <h1 id="site-name">Lincoln Ostomy Association</h1>
+        <h1>Lincoln Ostomy Association</h1>
         <p>Lincoln, Nebraska &mdash; United Ostomy Association of America Affiliate</p>
       </div>
     </div>
-    <div class="header-actions" id="header-actions">
+    <div class="header-actions">
       <a href="mailto:lincolnostomy@gmail.com">lincolnostomy@gmail.com</a>
-      <a href="https://www.facebook.com/lincoln.ostomy.7" target="_blank">Facebook</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank" class="cta">Join LOA</a>
     </div>
   </div>
@@ -252,7 +150,6 @@
     <a href="#newsletters">Newsletters</a>
     <a href="#products">Products</a>
     <a href="#education">Education</a>
-    <a href="https://ostomynebraska.com/lincoln/faq/" target="_blank">FAQ</a>
   </div>
 </nav>
 
@@ -295,11 +192,9 @@
             <a class="slider-item" href="25-Sparrow-Oct.pdf" target="_blank"><img src="25-Sparrow-Oct.png" alt=""><div class="si-label">Oct 2025</div></a>
             <a class="slider-item" href="25-Sparrow-July.pdf" target="_blank"><img src="25-Sparrow-July.jpg" alt=""><div class="si-label">Jul 2025</div></a>
             <a class="slider-item" href="25-Sparrow-Jan.pdf" target="_blank"><img src="25-Sparrow-Jan.png" alt=""><div class="si-label">Jan 2025</div></a>
-            <a class="slider-item" href="24-Sparrow-Oct.pdf" target="_blank"><img src="24-Sparrow-Oct.png" alt=""><div class="si-label">Oct 2024</div></a>
             <a class="slider-item" href="24-Sparrow-July.pdf" target="_blank"><img src="24-Sparrow-Jul.png" alt=""><div class="si-label">Jul 2024</div></a>
             <a class="slider-item" href="24-Sparrow-April.pdf" target="_blank"><img src="24-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2024</div></a>
             <a class="slider-item" href="24-Sparrow-January.pdf" target="_blank"><img src="24-Sparrow-Apr.png" alt=""><div class="si-label">Jan 2024</div></a>
-            <a class="slider-item" href="23-Sparrow-July-5.pdf" target="_blank"><img src="23-Sparrow-Jul.png" alt=""><div class="si-label">Jul 2023</div></a>
             <a class="slider-item" href="23-Sparrow-April.pdf" target="_blank"><img src="23-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2023</div></a>
             <a class="slider-item" href="23-Sparrow-Jan.pdf" target="_blank"><img src="23-Sparrow-Jul.png" alt=""><div class="si-label">Jan 2023</div></a>
           </div>
@@ -333,8 +228,7 @@
             <li><span class="clabel">Join</span><span><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank">Fill this form — easy!</a></span></li>
             <li><span class="clabel">Dues</span><span>Optional — $15/year, paid at the next LOA meeting.</span></li>
             <li><span class="clabel">Email</span><span><a href="mailto:lincolnostomy@gmail.com">lincolnostomy@gmail.com</a></span></li>
-            <li><span class="clabel">Facebook</span><span><a href="https://www.facebook.com/lincoln.ostomy.7" target="_blank">Visit our page</a></span></li>
-            <li><span class="clabel">Email Updates</span><span><a href="http://eepurl.com/hBBBmf" target="_blank">Sign up here</a></span></li>
+            <li><span class="clabel">Email Updates</span><span><a href="https://list-manage.us2.list-manage.com/subscribe?u=dafce3a6c19c04be4977647d5&id=027294c491" target="_blank">Sign up here</a></span></li>
           </ul>
           <a class="join-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank">Join LOA — It's Free to Start!</a>
         </div>
@@ -347,7 +241,6 @@
         <img src="doctor chart.jpeg" alt="Ostomy products">
         <div class="card-photo-text">
           <p>Lincoln is blessed with great home health suppliers and medical professionals. Some accept Medicare — best to call ahead. Shop local, but also consider online companies with everything from clothing to stoma care.</p>
-          <a class="section-btn" href="https://ostomynebraska.com/lincoln/products/" target="_blank">Browse Products &amp; Services &rarr;</a>
         </div>
       </div>
     </div>
@@ -358,8 +251,8 @@
         <img src="Nebraska Scene.jpeg" alt="Nebraska">
         <div class="card-photo-text">
           <p>Can you go back to work? Ride your bike? Will everyone figure out you've had surgery just by looking at you? View the latest products and techniques to help your journey as a Nebraskan with an ostomy.</p>
-          <a class="section-btn" href="https://ostomynebraska.com/lincoln/publications/" target="_blank">View Publications &rarr;</a>
-          <br><br>
+          <p><a href="26-Sparrow-Apr.pdf" target="_blank">Read the latest Sparrow Newsletter &rarr;</a></p>
+          <br>
           <p>📹 <a href="https://www.ostomy.org/ostomy-academy/" target="_blank">UOAA Ostomy Academy Videos</a></p>
         </div>
       </div>
@@ -386,17 +279,6 @@
         <div class="ap-sub">Reach the LOA community — contact us</div>
       </a>
     </div>
-    <div class="sidebar-section">
-      <h3>Quick Links</h3>
-      <ul class="quick-links">
-        <li><a href="https://www.ostomy.org/" target="_blank">UOAA National</a></li>
-        <li><a href="https://ostomynebraska.com/lincoln/products/" target="_blank">Local Products</a></li>
-        <li><a href="https://ostomynebraska.com/lincoln/publications/" target="_blank">Publications</a></li>
-        <li><a href="https://ostomynebraska.com/lincoln/faq/" target="_blank">FAQ</a></li>
-        <li><a href="http://eepurl.com/hBBBmf" target="_blank">Email Updates</a></li>
-        <li><a href="mailto:lincolnostomy@gmail.com">Email LOA</a></li>
-      </ul>
-    </div>
   </aside>
 </div>
 
@@ -409,17 +291,17 @@
       <p>Proud affiliate of the United Ostomy Association of America</p>
     </div>
     <div class="footer-links">
-      <h4>Navigation</h4>
-      <a href="https://ostomynebraska.com/lincoln/join/" target="_blank">Join</a>
-      <a href="https://ostomynebraska.com/lincoln/faq/" target="_blank">FAQ</a>
-      <a href="https://ostomynebraska.com/lincoln/products/" target="_blank">Products &amp; Services</a>
-      <a href="https://ostomynebraska.com/lincoln/publications/" target="_blank">Learn</a>
+      <h4>On This Page</h4>
+      <a href="#meetings">Meetings</a>
+      <a href="#connect">Connect / Join</a>
+      <a href="#newsletters">Newsletters</a>
+      <a href="#products">Products</a>
+      <a href="#education">Education</a>
     </div>
     <div class="footer-links">
       <h4>Contact</h4>
       <a href="mailto:lincolnostomy@gmail.com">lincolnostomy@gmail.com</a>
-      <a href="https://www.facebook.com/lincoln.ostomy.7" target="_blank">Facebook</a>
-      <a href="http://eepurl.com/hBBBmf" target="_blank">Email Updates</a>
+      <a href="https://list-manage.us2.list-manage.com/subscribe?u=dafce3a6c19c04be4977647d5&id=027294c491" target="_blank">Email Updates</a>
     </div>
   </div>
   <div class="footer-bottom">
