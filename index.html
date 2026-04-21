@@ -8,66 +8,71 @@
   <script src="content.js"></script>
   <style>
     :root {
-      --blue-dark:   #0e5a84;
-      --blue-mid:    #1a7ab5;
-      --blue-light:  #d6eef9;
-      --blue-pale:   #f0f8fd;
-      --accent:      #e8a020;
-      --text-dark:   #162530;
-      --text-mid:    #2e4e62;
-      --text-light:  #5a7a8e;
-      --white:       #ffffff;
-      --shadow:      0 2px 12px rgba(14,90,132,0.10);
-      --radius:      10px;
+      --blue-dark:  #0e5a84;
+      --blue-mid:   #1a7ab5;
+      --blue-light: #d6eef9;
+      --blue-pale:  #f0f8fd;
+      --accent:     #e8a020;
+      --text-dark:  #162530;
+      --text-mid:   #2e4e62;
+      --text-light: #5a7a8e;
+      --white:      #ffffff;
+      --shadow:     0 2px 12px rgba(14,90,132,0.10);
+      --radius:     10px;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: 'Source Sans 3', sans-serif;
-      font-weight: 400;
       background: var(--blue-pale);
       color: var(--text-dark);
       line-height: 1.6;
     }
 
-    /* ── HEADER ── */
+    /* HEADER */
     header {
       background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
       color: white;
-      padding: 0 30px;
     }
     .header-inner {
       max-width: 1140px;
       margin: 0 auto;
+      padding: 14px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 0;
       flex-wrap: wrap;
       gap: 12px;
     }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .header-logo {
+      height: 58px;
+      width: auto;
+      border-radius: 6px;
+    }
     .header-brand h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
+      font-size: 1.55rem;
       font-weight: 700;
-      letter-spacing: 0.3px;
       line-height: 1.2;
     }
     .header-brand p {
-      font-size: 0.82rem;
-      opacity: 0.78;
-      margin-top: 2px;
+      font-size: 0.78rem;
+      opacity: 0.75;
       font-weight: 300;
-      letter-spacing: 0.5px;
+      margin-top: 2px;
+      letter-spacing: 0.4px;
     }
-    .header-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .header-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
     .header-actions a {
-      font-size: 0.82rem;
+      font-size: 0.80rem;
       color: var(--blue-light);
       text-decoration: none;
-      padding: 6px 14px;
-      border: 1px solid rgba(255,255,255,0.3);
+      padding: 6px 13px;
+      border: 1px solid rgba(255,255,255,0.28);
       border-radius: 20px;
       transition: all 0.2s;
       white-space: nowrap;
@@ -81,11 +86,17 @@
     }
     .header-actions a.cta:hover { background: #d09010; }
 
-    /* ── NAV ── */
-    nav {
-      background: var(--blue-dark);
-      border-top: 1px solid rgba(255,255,255,0.12);
+    /* BANNER IMAGE */
+    .site-banner {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
     }
+
+    /* NAV */
+    nav { background: var(--blue-dark); border-top: 1px solid rgba(255,255,255,0.10); }
     .nav-inner {
       max-width: 1140px;
       margin: 0 auto;
@@ -93,22 +104,22 @@
       flex-wrap: wrap;
     }
     nav a {
-      color: rgba(255,255,255,0.80);
+      color: rgba(255,255,255,0.78);
       text-decoration: none;
-      padding: 11px 18px;
-      font-size: 0.88rem;
+      padding: 11px 17px;
+      font-size: 0.87rem;
       font-weight: 600;
       letter-spacing: 0.3px;
+      border-bottom: 3px solid transparent;
       transition: all 0.2s;
       display: block;
-      border-bottom: 3px solid transparent;
     }
     nav a:hover { color: white; border-bottom-color: var(--accent); }
 
-    /* ── PAGE WRAP ── */
+    /* PAGE WRAP */
     .page-wrap {
       max-width: 1140px;
-      margin: 28px auto;
+      margin: 26px auto;
       padding: 0 16px;
       display: flex;
       gap: 26px;
@@ -116,12 +127,12 @@
     }
     main { flex: 1; min-width: 0; }
 
-    /* ── MEETING BANNER ── */
+    /* MEETING BANNER */
     .meeting-banner {
       background: linear-gradient(135deg, var(--blue-dark) 0%, #1e8dc9 100%);
       color: white;
       border-radius: var(--radius);
-      padding: 26px 28px;
+      padding: 24px 26px;
       margin-bottom: 22px;
       position: relative;
       overflow: hidden;
@@ -134,14 +145,602 @@
       background: rgba(255,255,255,0.06);
       border-radius: 50%;
     }
-    .meeting-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; right: 60px;
-      width: 240px; height: 240px;
-      background: rgba(255,255,255,0.04);
-      border-radius: 50%;
-    }
     .meeting-banner h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.45
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    .meeting-meta {
+      font-size: 0.87rem;
+      opacity: 0.85;
+      margin-bottom: 16px;
+      font-weight: 300;
+      position: relative;
+    }
+    .meeting-dates {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .meeting-dates li {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 8px;
+      padding: 10px 16px;
+      flex: 1;
+      min-width: 150px;
+    }
+    .meeting-dates li .mdate { font-weight: 600; font-size: 1rem; display: block; }
+    .meeting-dates li .mspeaker { font-size: 0.80rem; opacity: 0.88; font-style: italic; display: block; margin-top: 2px; }
+    .perks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; position: relative; }
+    .perk-tag {
+      background: var(--accent);
+      color: white;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .meeting-note { font-size: 0.82rem; opacity: 0.78; font-style: italic; position: relative; }
+
+    /* NEWSLETTER STRIP */
+    .newsletter-strip {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nl-thumb {
+      width: 52px; height: 68px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+    .nl-text { flex: 1; min-width: 120px; }
+    .nl-label {
+      font-size: 0.70rem;
+      font-weight: 600;
+      color: var(--blue-mid);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .nl-issue {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      margin-top: 2px;
+    }
+    .nl-btn {
+      background: var(--blue-mid);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 0.87rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .nl-btn:hover { background: var(--blue-dark); }
+
+    /* NEWSLETTER SLIDER */
+    .slider-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 22px;
+      margin-bottom: 22px;
+    }
+    .slider-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--blue-dark);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--blue-light);
+    }
+    .slider-wrap { position: relative; }
+    .slider-track-outer { overflow: hidden; }
+    .slider-track {
+      display: flex;
+      gap: 14px;
+      transition: transform 0.4s ease;
+    }
+    .slider-item {
+      flex-shrink: 0;
+      width: 120px;
+      text-decoration: none;
+      color: var(--text-mid);
+      text-align: center;
+    }
+    .slider-item img {
+      width: 120px;
+      height: 156px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+      display: block;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .slider-item:hover img { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.20); }
+    .slider-item .si-label {
+      font-size: 0.76rem;
+      margin-top: 7px;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-60%);
+      background: var(--blue-dark);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 34px; height: 34px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+      z-index: 2;
+    }
+    .slider-btn:hover { background: var(--blue-mid); }
+    .slider-btn.prev { left: -16px; }
+    .slider-btn.next { right: -16px; }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 24px;
+      margin-bottom: 22px;
+    }
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--blue-light);
+    }
+    .card p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 10px; }
+    .card a { color: var(--blue-mid); }
+    .card a:hover { color: var(--blue-dark); }
+
+    /* CARD WITH PHOTO */
+    .card-photo {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .card-photo img {
+      width: 180px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .card-photo-text { flex: 1; min-width: 200px; }
+
+    /* HERO BULLETS */
+    .hero-bullets { list-style: none; padding: 0; margin-top: 10px; }
+    .hero-bullets li {
+      padding: 7px 0 7px 22px;
+      position: relative;
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      border-bottom: 1px solid var(--blue-light);
+    }
+    .hero-bullets li:last-child { border-bottom: none; }
+    .hero-bullets li::before { content: '✓'; position: absolute; left: 0; color: var(--blue-mid); font-weight: 700; }
+
+    /* CONNECT LIST */
+    .connect-list { list-style: none; }
+    .connect-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--blue-light);
+      font-size: 0.92rem;
+    }
+    .connect-list li:last-child { border-bottom: none; }
+    .clabel {
+      font-weight: 600;
+      color: var(--blue-dark);
+      min-width: 110px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .join-btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 11px 26px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.90rem;
+      transition: background 0.2s;
+    }
+    .join-btn:hover { background: #c8901a; color: white; }
+
+    .section-btn {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--blue-light);
+      color: var(--blue-dark);
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.87rem;
+      transition: background 0.2s;
+    }
+    .section-btn:hover { background: #b8dcf0; }
+
+    /* SIDEBAR */
+    aside { width: 262px; flex-shrink: 0; }
+    .sidebar-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      margin-bottom: 18px;
+    }
+    .sidebar-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--blue-light);
+    }
+    .ad-slot {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .ad-slot a { display: block; width: 100%; height: 100%; }
+    .ad-slot img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.2s;
+      border-radius: 8px;
+    }
+    .ad-slot img:hover { opacity: 0.88; }
+    .ad-placeholder-box {
+      width: 250px; height: 250px;
+      background: var(--blue-light);
+      border: 2px dashed var(--blue-mid);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      margin-bottom: 14px;
+      transition: background 0.2s;
+    }
+    .ad-placeholder-box:hover { background: #c4e0f0; }
+    .ap-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .ap-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--blue-dark); font-weight: 700; margin-bottom: 6px; }
+    .ap-sub { font-size: 0.76rem; color: var(--text-light); line-height: 1.4; }
+    .quick-links { list-style: none; }
+    .quick-links li { margin-bottom: 7px; }
+    .quick-links a {
+      color: var(--blue-mid);
+      font-size: 0.87rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .quick-links a::before { content: '→'; color: var(--accent); font-weight: 700; }
+    .quick-links a:hover { color: var(--blue-dark); }
+
+    /* FOOTER */
+    footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 30px 20px 18px; margin-top: 20px; }
+    .footer-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; gap: 24px;
+      justify-content: space-between; margin-bottom: 20px;
+    }
+    .footer-brand img { height: 50px; opacity: 0.88; margin-bottom: 8px; display: block; }
+    .footer-brand p { font-size: 0.80rem; line-height: 1.5; max-width: 210px; }
+    .footer-links h4 {
+      color: white; font-size: 0.83rem; font-weight: 600;
+      letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .footer-links a {
+      display: block; color: rgba(255,255,255,0.68);
+      text-decoration: none; font-size: 0.83rem; margin-bottom: 6px; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: white; }
+    .footer-bottom {
+      max-width: 1140px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 14px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+      font-size: 0.78rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    .footer-bottom a:hover { color: white; }
+
+    @media (max-width: 800px) {
+      .page-wrap { flex-direction: column; }
+      aside { width: 100%; }
+      .ad-slot, .ad-placeholder-box { width: 100%; height: 200px; }
+      .card-photo img { width: 100%; height: 180px; }
+    }
+    @media (max-width: 500px) {
+      .header-logo { height: 44px; }
+      .header-brand h1 { font-size: 1.2rem; }
+      .site-banner { max-height: 130px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <img class="header-logo" id="header-logo" src="" alt="LOA Logo">
+      <div class="header-brand">
+        <h1 id="site-name"></h1>
+        <p>Lincoln, Nebraska &mdash; United Ostomy Association of America Affiliate</p>
+      </div>
+    </div>
+    <div class="header-actions" id="header-actions"></div>
+  </div>
+</header>
+
+<img class="site-banner" id="site-banner" src="" alt="Lincoln Ostomy Association banner">
+
+<nav>
+  <div class="nav-inner">
+    <a href="#meetings">Meetings</a>
+    <a href="#connect">Connect / Join</a>
+    <a href="#newsletters">Newsletters</a>
+    <a href="#products">Products</a>
+    <a href="#education">Education</a>
+    <a href="https://ostomynebraska.com/lincoln/faq/" target="_blank">FAQ</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <main>
+    <div id="meeting-banner" class="meeting-banner"></div>
+    <div id="newsletter-strip" class="newsletter-strip"></div>
+    <div id="slider-section" class="slider-section"></div>
+    <div id="hero-card" class="card"></div>
+    <div id="connect-card" class="card"></div>
+    <div id="products-card" class="card"></div>
+    <div id="education-card" class="card"></div>
+  </main>
+  <aside id="sidebar"></aside>
+</div>
+
+<footer id="site-footer"></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const s = siteContent;
+
+  // HEADER
+  document.getElementById("site-name").textContent = s.organization.name;
+  document.getElementById("header-logo").src = s.organization.logo;
+  document.getElementById("site-banner").src = s.organization.banner;
+  document.getElementById("header-actions").innerHTML = `
+    <a href="mailto:${s.organization.email}">${s.organization.email}</a>
+    <a href="${s.organization.facebook}" target="_blank">Facebook</a>
+    <a href="${s.organization.joinFormUrl}" target="_blank" class="cta">Join LOA</a>
+  `;
+
+  // MEETING BANNER
+  const datesHTML = s.meetings.dates.map(d => `
+    <li>
+      <span class="mdate">${d.date}</span>
+      <span class="mspeaker">${d.speaker ? d.speaker + ', ' + d.company : d.details}</span>
+    </li>`).join("");
+  const perksHTML = s.meetings.perks.map(p => `<span class="perk-tag">${p}</span>`).join("");
+  document.getElementById("meeting-banner").innerHTML = `
+    <h2 id="meetings">${s.meetings.heading}</h2>
+    <div class="meeting-meta">🕑 ${s.meetings.time} &bull; 📍 ${s.meetings.location}, ${s.meetings.address}</div>
+    <ul class="meeting-dates">${datesHTML}</ul>
+    <div class="perks">${perksHTML}</div>
+    <div class="meeting-note">${s.meetings.note}</div>
+  `;
+
+  // NEWSLETTER STRIP (latest issue)
+  document.getElementById("newsletter-strip").innerHTML = `
+    <img class="nl-thumb" src="${s.newsletter.thumb}" alt="Sparrow Newsletter cover">
+    <div class="nl-text">
+      <div class="nl-label">${s.newsletter.label}</div>
+      <div class="nl-issue">${s.newsletter.issue}</div>
+    </div>
+    <a class="nl-btn" href="${s.newsletter.file}" target="_blank">Read PDF &rarr;</a>
+  `;
+
+  // NEWSLETTER SLIDER
+  const sliderItemsHTML = s.newsletterArchive.map(n => `
+    <a class="slider-item" href="${n.file}" target="_blank">
+      <img src="${n.thumb}" alt="${n.issue} Sparrow Newsletter">
+      <div class="si-label">${n.issue}</div>
+    </a>`).join("");
+
+  document.getElementById("slider-section").innerHTML = `
+    <h2 id="newsletters">Sparrow Newsletter Archive</h2>
+    <div class="slider-wrap">
+      <button class="slider-btn prev" id="sliderPrev">&#8592;</button>
+      <div class="slider-track-outer">
+        <div class="slider-track" id="sliderTrack">${sliderItemsHTML}</div>
+      </div>
+      <button class="slider-btn next" id="sliderNext">&#8594;</button>
+    </div>
+  `;
+
+  // Slider logic
+  const track = document.getElementById("sliderTrack");
+  const itemWidth = 134; // 120px + 14px gap
+  let sliderPos = 0;
+  const visibleCount = () => Math.floor(track.parentElement.offsetWidth / itemWidth);
+  const maxPos = () => Math.max(0, s.newsletterArchive.length - visibleCount());
+
+  document.getElementById("sliderNext").addEventListener("click", () => {
+    if (sliderPos < maxPos()) { sliderPos++; updateSlider(); }
+  });
+  document.getElementById("sliderPrev").addEventListener("click", () => {
+    if (sliderPos > 0) { sliderPos--; updateSlider(); }
+  });
+  function updateSlider() {
+    track.style.transform = `translateX(-${sliderPos * itemWidth}px)`;
+  }
+
+  // HERO
+  const bulletsHTML = s.hero.bullets.map(b => `<li>${b}</li>`).join("");
+  document.getElementById("hero-card").innerHTML = `
+    <h2>About Lincoln Ostomy Association</h2>
+    <div class="card-photo">
+      <img src="${s.hero.image}" alt="LOA community">
+      <div class="card-photo-text">
+        <p><em>${s.hero.tagline}</em></p>
+        <p>${s.hero.body}</p>
+        <ul class="hero-bullets">${bulletsHTML}</ul>
+      </div>
+    </div>
+  `;
+
+  // CONNECT
+  const connectHTML = s.connect.items.map(i => `
+    <li>
+      <span class="clabel">${i.label}</span>
+      <span>${i.url ? `<a href="${i.url}"${i.url.startsWith('http') ? ' target="_blank"' : ''}>${i.text}</a>` : i.text}</span>
+    </li>`).join("");
+  document.getElementById("connect-card").innerHTML = `
+    <h2 id="connect">Connect &amp; Join</h2>
+    <div class="card-photo">
+      <img src="${s.connect.image}" alt="Connect with LOA">
+      <div class="card-photo-text">
+        <ul class="connect-list">${connectHTML}</ul>
+        <a class="join-btn" href="${s.organization.joinFormUrl}" target="_blank">Join LOA — It's Free to Start!</a>
+      </div>
+    </div>
+  `;
+
+  // PRODUCTS
+  document.getElementById("products-card").innerHTML = `
+    <h2 id="products">${s.products.heading}</h2>
+    <div class="card-photo">
+      <img src="${s.products.image}" alt="Ostomy products">
+      <div class="card-photo-text">
+        <p>${s.products.intro}</p>
+        <a class="section-btn" href="${s.products.url}" target="_blank">Browse Products &amp; Services &rarr;</a>
+      </div>
+    </div>
+  `;
+
+  // EDUCATION
+  document.getElementById("education-card").innerHTML = `
+    <h2 id="education">${s.education.heading}</h2>
+    <div class="card-photo">
+      <img src="${s.education.image}" alt="Nebraska ostomates">
+      <div class="card-photo-text">
+        <p>${s.education.intro}</p>
+        <a class="section-btn" href="${s.education.url}" target="_blank">View Publications &rarr;</a>
+        <br><br>
+        <p>📹 <a href="${s.education.videoUrl}" target="_blank">${s.education.videoLabel}</a></p>
+      </div>
+    </div>
+  `;
+
+  // SIDEBAR
+  let adsHTML = s.ads.map(ad => {
+    if (ad.placeholder) {
+      return `<a class="ad-placeholder-box" href="${ad.url}">
+        <div class="ap-icon">📣</div>
+        <div class="ap-title">${ad.placeholderText}</div>
+        <div class="ap-sub">${ad.placeholderSub}</div>
+      </a>`;
+    } else {
+      return `<div class="ad-slot">
+        <a href="${ad.url}" target="_blank" title="${ad.alt}">
+          <img src="${ad.image}" alt="${ad.alt}">
+        </a>
+      </div>`;
+    }
+  }).join("");
+
+  document.getElementById("sidebar").innerHTML = `
+    <div class="sidebar-section">
+      <h3>Sponsors &amp; Partners</h3>
+      ${adsHTML}
+    </div>
+    <div class="sidebar-section">
+      <h3>Quick Links</h3>
+      <ul class="quick-links">
+        <li><a href="https://www.ostomy.org/" target="_blank">UOAA National</a></li>
+        <li><a href="https://ostomynebraska.com/lincoln/products/" target="_blank">Local Products</a></li>
+        <li><a href="https://ostomynebraska.com/lincoln/publications/" target="_blank">Publications</a></li>
+        <li><a href="https://ostomynebraska.com/lincoln/faq/" target="_blank">FAQ</a></li>
+        <li><a href="${s.organization.emailUpdatesUrl}" target="_blank">Email Updates</a></li>
+        <li><a href="mailto:${s.organization.email}">Email LOA</a></li>
+      </ul>
+    </div>
+  `;
+
+  // FOOTER
+  const footerLinksHTML = s.footer.links.map(l =>
+    `<a href="${l.url}" target="_blank">${l.label}</a>`).join("");
+  document.getElementById("site-footer").innerHTML = `
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="${s.footer.affiliateUrl}" target="_blank">
+          <img src="${s.footer.affiliateLogo}" alt="LOA Logo">
+        </a>
+        <p>${s.footer.affiliate}</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        ${footerLinksHTML}
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="mailto:${s.footer.email}">${s.footer.email}</a>
+        <a href="${s.organization.facebook}" target="_blank">Facebook</a>
+        <a href="${s.organization.emailUpdatesUrl}" target="_blank">Email Updates</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>${s.footer.copyright}</span>
+      <span>Questions? <a href="mailto:${s.footer.email}">${s.footer.email}</a></span>
+    </div>
+  `;
+
+});
+</script>
+</body>
+</html>
