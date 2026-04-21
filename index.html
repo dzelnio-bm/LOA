@@ -1,1 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lincoln Ostomy Association</title>
+  <script src="content.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f0f7fb;
+      color: #1a2e3b;
+    }
+
+    /* HEADER */
+    header {
+      background: #1a6a9a;
+      color: white;
+      padding: 18px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    header h1 {
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
+    }
+    header p {
+      font-size: 0.85rem;
+      opacity: 0.85;
+      font-style: italic;
+    }
+    header a.email-link {
+      color: #cce8f7;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    header a.email-link:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      background: #135580;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+      padding: 0 20px;
+    }
+    nav a {
+      color: #d6edf9;
+      text-decoration: none;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      font-family: Arial, sans-serif;
+      transition: background 0.2s;
+    }
+    nav a:hover { background: #1a6a9a; color: white; }
+
+    /* LAYOUT */
+    .page-wrap {
+      display: flex;
+      max-width: 1100px;
+      margin: 24px auto;
+      padding: 0 16px;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    /* MAIN CONTENT */
+    main { flex: 1; min-width: 0; }
+
+    /* MEETING BANNER */
+    .meeting-banner {
+      background: #1a6a9a;
+      color: white;
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin-bottom: 22px;
+    }
+    .meeting-banner h2 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+    .meeting-banner .meta {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 14px;
+    }
+    .meeting-dates { list-style: none; margin-bottom: 14px; }
+    .meeting-dates li {
+      background: rgba(255,255,255,0.15);
+      border-radius: 5px;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+    .meeting-dates li strong { font-size: 1rem; }
+    .meeting-dates li .speaker { font-style: italic; font-size: 0.88rem; opacity: 0.9; }
+    .perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .perk-tag {
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.82rem;
+      font-family: Arial, sans-serif;
+    }
+    .meeting-note { font-size: 0.85rem; opacity: 0.85; font-style: italic; }
+
+    /* NEWSLETTER BANNER */
+    .newsletter-banner {
+      background: #e8f4fb;
+      border: 2px solid #1a6a9a;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .newsletter-banner .nl-label {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 0.85rem;
+      color: #135580;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .newsletter-banner .nl-issue {
+      font-size: 1.1rem;
+      color: #1a2e3b;
+      font-weight: bold;
+    }
+    .newsletter-banner a.nl-btn {
+      background: #1a6a9a;
+      color: white;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .newsletter-banner a.nl-btn:hover { background: #135580; }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .card h2 {
+      color: #1a6a9a;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #cce8f7;
+      padding-bottom: 8px;
+    }
+    .card p { line-height: 1.7; margin-bottom: 10px; font-size: 0.95rem; }
+    .card ul { padding-left: 20px; margin-top: 6px; }
+    .card ul li { line-height: 1.7; font-size: 0.95rem; margin-bottom: 4px; }
+
+    /* CONNECT LIST */
+    .connect-list { list-style: none; }
+    .connect-list li { padding: 7px 0; border-bottom: 1px solid #e8f4fb; font-size: 0.95rem; }
+    .connect-list li:last-child { border-bottom: none; }
+    .connect-list li strong { color: #135580; min-width: 60px; display: inline-block; }
+    .connect-list a { color: #1a6a9a; }
+
+    /* LEARN SECTIONS */
+    .learn-section { margin-bottom: 16px; }
+    .learn-section h3 {
+      font-size: 1rem;
+      color: #135580;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      font-family: Arial, sans-serif;
+    }
+    .learn-section p { font-size: 0.93rem; line-height: 1.7; color: #2a3f50; }
+
+    /* PRODUCT COLUMNS */
+    .two-col { display: flex; gap: 20px; flex-wrap: wrap; }
+    .two-col > div { flex: 1; min-width: 200px; }
+    .two-col h3 { color: #135580; font-size: 0.95rem; margin-bottom: 8px; font-family: Arial, sans-serif; }
+    .two-col ul { list-style: disc; padding-left: 18px; }
+    .two-col ul li { font-size: 0.88rem; line-height: 1.6; }
+
+    /* EDUCATION LINKS */
+    .edu-links { list-style: none; margin-top: 10px; }
+    .edu-links li { margin-bottom: 8px; }
+    .edu-links a { color: #1a6a9a; font-size: 0.93rem; }
+    .edu-links a:hover { text-decoration: underline; }
+
+    /* SIDEBAR */
+    aside {
+      width: 260px;
+      flex-shrink: 0;
+    }
+    .ad-slot {
+      width: 250px;
+      height: 250px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .ad-placeholder {
+      width: 100%;
+      height: 100%;
+      background: #cce8f7;
+      border: 2px dashed #1a6a9a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .ad-placeholder:hover { background: #b3d9f0; }
+    .ad-placeholder .ad-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .ad-placeholder .ad-title {
+      font-weight: bold;
+      color: #135580;
+      font-size: 1rem;
+      font-family: Arial, sans-serif;
+      margin-bottom: 6px;
+    }
+    .ad-placeholder .ad-sub {
+      color: #2a6080;
+      font-size: 0.8rem;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar-card {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      font-size: 0.88rem;
+    }
+    .sidebar-card h3 {
+      color: #1a6a9a;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      font-family: Arial, sans-serif;
+    }
+    .sidebar-card a { color: #1a6a9a; display: block; margin-bottom: 6px; }
+
+    /* FOOTER */
+    footer {
+      background: #135580;
+      color: #cce8f7;
+      text-align: center;
+      padding: 20px 16px;
+      margin-top: 20px;
+      font-size: 0.85rem;
+      font-family: Arial, sans-serif;
+    }
+    footer a { color: #90d0f0; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer p { margin-bottom: 4px; }
+
+    @media (max-width: 720px) {
+      .page-wrap { flex-direction: column; }
+      aside { width: 100%; }
+      .ad-slot { width: 100%; height: auto; min-height: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1 id="site-name"></h1>
+    <p>Lincoln, Nebraska &mdash; Proud affiliate of the United Ostomy Association of America</p>
+  </div>
+  <a class="email-link" id="header-email" href="#"></a>
+</header>
+
+<nav>
+  <a href="#meetings">Meetings</a>
+  <a href="#connect">Connect / Join</a>
+  <a href="#learn">Learn</a>
+  <a href="#products">Products</a>
+  <a href="#education">Education</a>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- MEETING BANNER -->
+    <div class="meeting-banner" id="meeting-banner"></div>
+
+    <!-- NEWSLETTER BANNER -->
+    <div class="newsletter-banner" id="newsletter-banner"></div>
+
+    <!-- HERO -->
+    <div class="card" id="hero-card"></div>
+
+    <!-- CONNECT -->
+    <div class="card" id="connect-card">
+      <h2 id="connect-anchor">Connect &amp; Join</h2>
+    </div>
+
+    <!-- LEARN -->
+    <div class="card" id="learn-card"></div>
+
+    <!-- PRODUCTS -->
+    <div class="card" id="products-card"></div>
+
+    <!-- EDUCATION -->
+    <div class="card" id="education-card"></div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar"></aside>
+
+</div>
+
+<footer id="site-footer"></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const s = siteContent;
+
+  // HEADER
+  document.getElementById("site-name").textContent = s.organization.name;
+  const headerEmail = document.getElementById("header-email");
+  headerEmail.textContent = s.organization.email;
+  headerEmail.href = "mailto:" + s.organization.email;
+
+  // MEETING BANNER
+  const mb = document.getElementById("meeting-banner");
+  let datesHTML = s.meetings.dates.map(d => `
+    <li>
+      <strong>${d.date}</strong>
+      ${d.speaker ? `<span class="speaker"> &mdash; ${d.speaker}, ${d.company}</span>` : ""}
+      ${d.details ? `<span class="speaker"> &mdash; ${d.details}</span>` : ""}
+    </li>`).join("");
+
+  let perksHTML = s.meetings.perks.map(p => `<span class="perk-tag">${p}</span>`).join("");
+
+  mb.innerHTML = `
+    <h2 id="meetings">${s.meetings.heading}</h2>
+    <div class="meta">${s.meetings.time} &bull; ${s.meetings.location} &bull; ${s.meetings.address}</div>
+    <ul class="meeting-dates">${datesHTML}</ul>
+    <div class="perks">${perksHTML}</div>
+    <div class="meeting-note">${s.meetings.note}</div>
+  `;
+
+  // NEWSLETTER BANNER
+  const nb = document.getElementById("newsletter-banner");
+  nb.innerHTML = `
+    <div>
+      <div class="nl-label">${s.newsletter.label}</div>
+      <div class="nl-issue">${s.newsletter.issue}</div>
+    </div>
+    <a class="nl-btn" href="${s.newsletter.file}" target="_blank">Read Now &rarr;</a>
+  `;
+
+  // HERO
+  const hero = document.getElementById("hero-card");
+  let bulletsHTML = s.hero.bullets.map(b => `<li>${b}</li>`).join("");
+  hero.innerHTML = `
+    <h2>About LOA</h2>
+    <p>${s.hero.tagline}</p>
+    <p>${s.hero.body}</p>
+    <ul>${bulletsHTML}</ul>
+  `;
+
+  // CONNECT
+  const cc = document.getElementById("connect-card");
+  let connectHTML = s.connect.items.map(i => `
+    <li>
+      <strong>${i.label}:</strong>
+      ${i.url ? `<a href="${i.url}">${i.text}</a>` : i.text}
+    </li>`).join("");
+  cc.innerHTML = `
+    <h2><a name="connect"></a>Connect &amp; Join</h2>
+    <p>Dues are ${s.organization.dues}. Pay at the next meeting or fill out the form below.</p>
+    <ul class="connect-list">${connectHTML}</ul>
+  `;
+
+  // LEARN
+  const lc = document.getElementById("learn-card");
+  let learnHTML = s.learn.sections.map(sec => `
+    <div class="learn-section">
+      <h3>${sec.question}</h3>
+      <p>${sec.answer}</p>
+    </div>`).join("");
+  lc.innerHTML = `
+    <h2 id="learn">${s.learn.heading}</h2>
+    ${learnHTML}
+    <p><a href="${s.learn.videoUrl}" target="_blank">${s.learn.videoLabel}</a></p>
+  `;
+
+  // PRODUCTS
+  const pc = document.getElementById("products-card");
+  let suppliersHTML = s.products.suppliers.map(p => `<li>${p}</li>`).join("");
+  let freeHTML = s.products.freeTrialBrands.map(p => `<li>${p}</li>`).join("");
+  let medHTML = s.products.medicalSupport.map(p => `<li>${p}</li>`).join("");
+  pc.innerHTML = `
+    <h2 id="products">${s.products.heading}</h2>
+    <p>${s.products.intro} <a href="${s.products.productsUrl}" target="_blank">Browse products &rarr;</a></p>
+    <div class="two-col">
+      <div>
+        <h3>Suppliers</h3>
+        <ul>${suppliersHTML}</ul>
+      </div>
+      <div>
+        <h3>Free Trial Brands</h3>
+        <p style="font-size:0.85rem;margin-bottom:8px;">${s.products.freeTrialNote}</p>
+        <ul>${freeHTML}</ul>
+        <h3 style="margin-top:14px;">Medical Support</h3>
+        <ul>${medHTML}</ul>
+      </div>
+    </div>
+  `;
+
+  // EDUCATION
+  const ec = document.getElementById("education-card");
+  let eduLinksHTML = s.education.links.map(l =>
+    `<li><a href="${l.url}" target="_blank">${l.label}</a></li>`).join("");
+  ec.innerHTML = `
+    <h2 id="education">${s.education.heading}</h2>
+    <p>${s.education.intro} <a href="${s.education.url}" target="_blank">View publications &rarr;</a></p>
+    <ul class="edu-links">${eduLinksHTML}</ul>
+  `;
+
+  // SIDEBAR
+  const sidebar = document.getElementById("sidebar");
+  let adsHTML = s.ads.map(ad => {
+    if (ad.placeholder) {
+      return `
+        <div class="ad-slot">
+          <a class="ad-placeholder" href="${ad.url}">
+            <div class="ad-icon">📣</div>
+            <div class="ad-title">${ad.placeholderText}</div>
+            <div class="ad-sub">${ad.placeholderSub}</div>
+          </a>
+        </div>`;
+    } else {
+      return `
+        <div class="ad-slot">
+          <a href="${ad.url}" target="_blank">
+            <img src="${ad.image}" alt="${ad.alt}" style="width:100%;height:100%;object-fit:cover;border-radius:7px;">
+          </a>
+        </div>`;
+    }
+  }).join("");
+
+  sidebar.innerHTML = `
+    ${adsHTML}
+    <div class="sidebar-card">
+      <h3>Quick Links</h3>
+      <a href="https://www.ostomy.org/" target="_blank">UOAA National</a>
+      <a href="https://ostomynebraska.com/lincoln/products/" target="_blank">Local Products</a>
+      <a href="https://ostomynebraska.com/lincoln/publications/" target="_blank">Publications</a>
+      <a href="mailto:${s.organization.email}">Email LOA</a>
+    </div>
+    <div class="sidebar-card">
+      <h3>UOAA Ostomy Academy</h3>
+      <p style="font-size:0.83rem;line-height:1.6;margin-bottom:8px;">Video resources for ostomates at every stage of their journ
