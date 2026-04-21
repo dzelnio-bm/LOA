@@ -4,8 +4,9 @@ const siteContent = {
     name: "Lincoln Ostomy Association",
     abbreviation: "LOA",
     email: "lincolnostomy@gmail.com",
-    facebook: "https://www.facebook.com",
-    joinFormUrl: "#join",
+    facebook: "https://www.facebook.com/lincoln.ostomy.7",
+    joinFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform",
+    emailUpdatesUrl: "http://eepurl.com/hBBBmf",
     dues: "$15 per year (optional)"
   },
 
@@ -39,108 +40,62 @@ const siteContent = {
   },
 
   newsletter: {
-    label: "CHECK THE NEW SPARROW NEWSLETTER",
+    label: "NEW SPARROW NEWSLETTER",
     issue: "April 2026",
-    file: "assets/docs/sparrow-newsletter-april-2026.pdf"
+    file: "https://ostomynebraska.com/wp-content/uploads/2026/04/2026-Sparrow-April-FINAL2.pdf",
+    thumb: "https://ostomynebraska.com/wp-content/uploads/2026/04/SparrowApr2026-231x300.png"
   },
 
   hero: {
     tagline: "We'll walk with you through your ostomy journey.",
-    body: "Lincoln Ostomy Association provides tools for ostomates. According to Mayo Clinic, it takes time to be comfortable with an ostomy. Connecting with community can help. A report by the United Ostomy Association estimates that 500–800,000 people have a stoma in the U.S. and 120,000 new surgeries are performed each year.",
+    body: "Lincoln Ostomy Association provides tools for ostomates. According to Mayo Clinic, it takes time to be comfortable with an ostomy — connecting with community can help. The United Ostomy Association estimates 500–800,000 people have a stoma in the U.S. and 120,000 new surgeries are performed each year.",
     bullets: [
-      "You can do many of the same activities you enjoyed before your ostomy surgery.",
-      "You can ask questions you might be embarrassed to ask your doctor or nurse.",
-      "You can get tips to help you adapt to life with an ostomy."
+      "Do many of the same activities you enjoyed before your surgery.",
+      "Ask questions you might be embarrassed to ask your doctor or nurse.",
+      "Get tips to help you adapt to life with an ostomy."
     ]
   },
 
   connect: {
-    heading: "Connect",
+    heading: "Connect & Join",
     items: [
-      { label: "Join", text: "Just fill this form. Easy!", url: "#join" },
-      { label: "Dues", text: "Optional dues are $15 per year, paid at the next LOA meeting.", url: null },
+      { label: "Join", text: "Fill this form — easy!", url: "https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" },
+      { label: "Dues", text: "Optional — $15/year, paid at the next LOA meeting.", url: null },
       { label: "Email", text: "lincolnostomy@gmail.com", url: "mailto:lincolnostomy@gmail.com" },
-      { label: "Facebook", text: "Visit our Facebook page", url: "https://www.facebook.com" },
-      { label: "Sign up", text: "Get email updates", url: "mailto:lincolnostomy@gmail.com?subject=Email Updates" }
+      { label: "Facebook", text: "Visit our page", url: "https://www.facebook.com/lincoln.ostomy.7" },
+      { label: "Email Updates", text: "Sign up here", url: "http://eepurl.com/hBBBmf" }
     ]
   },
 
-  learn: {
-    heading: "So you have an ostomy. Now what?",
-    sections: [
-      {
-        question: "Where do I find experienced nurses?",
-        answer: "Certain nurses are trained specifically for ostomy care. Fitting, products and complications are more easily addressed by people trained specifically for our state. Email lincolnostomy@gmail.com and we'll connect you to some great medical experts."
-      },
-      {
-        question: "If I just knew someone in the know...",
-        answer: "Lincoln Ostomy Association offers moral and educational support to those facing or who have had ostomy surgery. LOA provides an ostomy visitors program which offers one-on-one support by a trained certified visitor. Visits can be made in person to the hospital, home, or by telephone to answer initial concerns of the new patient."
-      },
-      {
-        question: "What does everyone think about me now?",
-        answer: "After surgery, new ostomates may fear their social role has changed. You do not have to tell everyone about your surgery — be selective. Ostomates can explain surgery with a brief statement such as: 'An ostomy is a surgical procedure for the diversion of bowel (or bladder).' Concerns about returning to work, relationships, and sexuality are all common and can be addressed with support from LOA members and healthcare professionals."
-      }
-    ],
-    videoUrl: "https://www.ostomy.org/ostomy-academy/",
-    videoLabel: "More videos from UOAA Ostomy Academy"
-  },
+  featured: [
+    { title: "Ostomy robbing your sleep?", url: "https://ostomynebraska.com/ostomy-robbing-your-sleep/", img: "https://ostomynebraska.com/wp-content/uploads/2024/01/Sleep3434-300x199.png" },
+    { title: "New to Ostomy?", url: "https://ostomynebraska.com/new-to-ostomy/", img: "https://ostomynebraska.com/wp-content/uploads/2024/01/qtq80-XaC4GA-300x200.jpeg" },
+    { title: "Ostomy innovation — what's next?", url: "https://ostomynebraska.com/ostomy-innovation-whats-next/", img: "https://ostomynebraska.com/wp-content/uploads/2024/01/Ostomy-Innovation-300x164.png" },
+    { title: "LOA advocates with UOAA", url: "https://ostomynebraska.com/loa-advocates-with-uoaa/", img: "https://ostomynebraska.com/wp-content/uploads/2024/01/qtq80-jOFpFm-300x154.jpeg" }
+  ],
 
   products: {
     heading: "Ostomy Products & Services",
-    intro: "Lincoln is blessed with great home health suppliers and medical professionals. Some accept Medicare, but it's best to call ahead. Shop local, but also consider online companies which provide everything from clothing to stoma care products.",
-    productsUrl: "https://ostomynebraska.com/lincoln/products/",
-    freeTrialNote: "Manufacturers of ostomy products often send free trials. Not every product works for every person. Try calling or emailing manufacturers to ask about trial programs.",
-    suppliers: [
-      "Active Lifestyle Products", "AD Mirror", "Celebration Ostomy Belt",
-      "Children's Home HealthCare", "CHI Health Home Medical Equipment",
-      "Coloplast", "Convatec", "Cymed", "Frontier Home Medical Inc.",
-      "Hollister", "Kohll's/Wagey Drug", "Na`Scent", "Nu-Hope Ostomy",
-      "Osto EZ-Vent®", "Parthenon", "Schena Ostomy", "Safe n Simple",
-      "SecuriCare", "Securi-T", "Shield HealthCare",
-      "Triumph Home Health Supplies", "Torbot Group"
-    ],
-    freeTrialBrands: [
-      "Active Lifestyle Products", "Coloplast", "Convatec", "Cymed",
-      "Hollister", "Na`Scent", "Nu-Hope Ostomy", "Osto-EZ-Vent®",
-      "Schena Ostomy", "SecuriCare", "Securi-T", "Torbot Group"
-    ],
-    medicalSupport: [
-      "CHI Health St. Elizabeth's Hospital", "Bryan Health",
-      "Nebraska Surgery Center", "Lincoln Surgical Hospital",
-      "Gastroenterology Specialties PC",
-      "Lincoln Surgery Endoscopy Services",
-      "Madonna Rehab", "The Healing Touch, Inc (Joan Junkin)"
-    ]
+    intro: "Lincoln is blessed with great home health suppliers and medical professionals. Some accept Medicare — best to call ahead. Shop local, but also consider online companies with everything from clothing to stoma care.",
+    url: "https://ostomynebraska.com/lincoln/products/"
   },
 
   education: {
     heading: "Ostomy Education",
-    intro: "Questions occur as a new ostomate plans their first activities. Can you go back to work? Ride your bike? Will everyone figure out you've had surgery just by looking at you? View the latest products and techniques to help your journey as a Nebraskan with an ostomy.",
+    intro: "Can you go back to work? Ride your bike? Will everyone figure out you've had surgery just by looking at you? View the latest products and techniques to help your journey as a Nebraskan with an ostomy.",
     url: "https://ostomynebraska.com/lincoln/publications/",
-    links: [
-      { label: "Crohn's & Colitis Foundation of America", url: "https://www.crohnscolitisfoundation.org/" },
-      { label: "United Ostomy Association of America", url: "https://www.ostomy.org/" },
-      { label: "Wound, Ostomy and Continence Nurses Society (WOCN)", url: "https://www.wocn.org/" },
-      { label: "University of Nebraska Medical Center", url: "https://www.unmc.edu/" }
-    ]
+    videoUrl: "https://www.ostomy.org/ostomy-academy/",
+    videoLabel: "UOAA Ostomy Academy Videos"
   },
 
   ads: [
     {
       id: 1,
-      image: null,
-      alt: "Advertise Here",
-      url: "mailto:lincolnostomy@gmail.com?subject=Advertising Inquiry",
-      placeholder: true,
-      placeholderText: "Advertise Here",
-      placeholderSub: "Contact us to reach the LOA community"
-    }
-  ],
-
-  footer: {
-    affiliate: "Proud affiliate of the United Ostomy Association of America",
-    email: "lincolnostomy@gmail.com",
-    copyright: "© 2026 Lincoln Ostomy Association"
-  }
-
-};
+      image: "https://ostomynebraska.com/wp-content/uploads/2025/04/Kem21-221x300.png",
+      alt: "KEM Online",
+      url: "https://www.kemonline.com/content/home/",
+      placeholder: false
+    },
+    {
+      id: 2,
+      image: "https://ostomynebraska.com/wp-content/uploads/2024/01/Triumph-250x.jpg
