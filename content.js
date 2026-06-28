@@ -10,36 +10,18 @@ const siteContent = {
     dues: "$15 per year (optional)",
     logo: "Logo.png",
     banner: "Banner-2400x.png"
-  },
-
-  meetings: {
-    heading: "LOA MEETING!",
-    time: "2–4 p.m.",
-    location: "Aldersgate Church",
-    address: "8320 South St., Lincoln, NE",
-    perks: ["Snacks", "Networking", "Community Initiatives"],
-    note: "Everyone is invited to bring a snack to share.",
-    dates: [
-      {
-        date: "June 7, 2026",
-        speaker: "Andrew Kauffmann",
-        company: "Convatec",
-        details: ""
-      },
-      {
-        date: "September 13, 2026",
-        speaker: "",
-        company: "",
-        details: "TBA"
-      },
-      {
-        date: "December 6, 2026",
-        speaker: "",
-        company: "",
-        details: "TBA"
-      }
-    ]
-  },
+ {
+  date: "September 13, 2026",
+  speaker: "Michelle Hagenson, MSN, RN, CWON",
+  company: "",
+  details: "Recognizing the Symptoms to Plug the Leak on B12 Loss"
+},
+{
+  date: "December 6, 2026",
+  speaker: "",
+  company: "",
+  details: "Special Ostomy Panel & Annual Potluck Picnic"
+},
 
   newsletter: {
     label: "NEW SPARROW NEWSLETTER",
