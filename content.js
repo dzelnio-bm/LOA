@@ -14,7 +14,7 @@ const siteContent = {
   date: "September 13, 2026",
   speaker: "Michelle Hagenson, MSN, RN, CWON",
   company: "",
-  details: "Recognizing the Symptoms to Plug the Leak on B12 Loss & Annual Potluck Picnic"
+  details: "<mark><strong><span style='color: red;'>🧺 Annual Potluck Picnic</span></strong></mark> & Michelle Hagenson, MSN, RN, CWON — \"Recognizing the Symptoms to Plug the Leak on B12 Loss\""
 },
 {
   date: "December 6, 2026",
