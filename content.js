@@ -10,17 +10,17 @@ const siteContent = {
     dues: "$15 per year (optional)",
     logo: "Logo.png",
     banner: "Banner-2400x.png"
- {
+{
   date: "September 13, 2026",
   speaker: "Michelle Hagenson, MSN, RN, CWON",
   company: "",
-  details: "Recognizing the Symptoms to Plug the Leak on B12 Loss"
+  details: "Recognizing the Symptoms to Plug the Leak on B12 Loss & Annual Potluck Picnic"
 },
 {
   date: "December 6, 2026",
   speaker: "",
   company: "",
-  details: "Special Ostomy Panel & Annual Potluck Picnic"
+  details: "Special Ostomy Panel"
 },
 
   newsletter: {
