@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lincoln Ostomy Association</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJ3166G0P5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VJ3166G0P5');
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -135,8 +145,8 @@
       </div>
     </div>
     <div class="header-actions">
-      <a href="mailto:lincolnostomy@gmail.com">lincolnostomy@gmail.com</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank" class="cta">Join LOA</a>
+      <a href="mailto:lincolnostomy@gmail.com" onclick="gtag('event','email_click',{link_location:'header'});">lincolnostomy@gmail.com</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank" class="cta" onclick="gtag('event','join_click',{link_location:'header'});">Join LOA</a>
     </div>
   </div>
 </header>
@@ -177,7 +187,7 @@
         <div class="nl-label">NEW SPARROW NEWSLETTER</div>
         <div class="nl-issue">April 2026</div>
       </div>
-      <a class="nl-btn" href="26-Sparrow-Apr.pdf" target="_blank">Read PDF &rarr;</a>
+      <a class="nl-btn" href="26-Sparrow-Apr.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'April 2026', link_location:'featured_strip'});">Read PDF &rarr;</a>
     </div>
 
     <div class="slider-section">
@@ -186,16 +196,16 @@
         <button class="slider-btn prev" id="sliderPrev">&#8592;</button>
         <div class="slider-track-outer">
           <div class="slider-track" id="sliderTrack">
-            <a class="slider-item" href="26-Sparrow-Apr.pdf" target="_blank"><img src="26-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2026</div></a>
-            <a class="slider-item" href="26-Sparrow-Jan.pdf" target="_blank"><img src="26-Sparrow-Jan.png" alt=""><div class="si-label">Jan 2026</div></a>
-            <a class="slider-item" href="25-Sparrow-Oct.pdf" target="_blank"><img src="25-Sparrow-Oct.png" alt=""><div class="si-label">Oct 2025</div></a>
-            <a class="slider-item" href="25-Sparrow-July.pdf" target="_blank"><img src="25-Sparrow-July.jpg" alt=""><div class="si-label">Jul 2025</div></a>
-            <a class="slider-item" href="25-Sparrow-Jan.pdf" target="_blank"><img src="25-Sparrow-Jan.png" alt=""><div class="si-label">Jan 2025</div></a>
-            <a class="slider-item" href="24-Sparrow-July.pdf" target="_blank"><img src="24-Sparrow-Jul.png" alt=""><div class="si-label">Jul 2024</div></a>
-            <a class="slider-item" href="24-Sparrow-April.pdf" target="_blank"><img src="24-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2024</div></a>
-            <a class="slider-item" href="24-Sparrow-January.pdf" target="_blank"><img src="24-Sparrow-Apr.png" alt=""><div class="si-label">Jan 2024</div></a>
-            <a class="slider-item" href="23-Sparrow-April.pdf" target="_blank"><img src="23-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2023</div></a>
-            <a class="slider-item" href="23-Sparrow-Jan.pdf" target="_blank"><img src="23-Sparrow-Jul.png" alt=""><div class="si-label">Jan 2023</div></a>
+            <a class="slider-item" href="26-Sparrow-Apr.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'April 2026', link_location:'archive_slider'});"><img src="26-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2026</div></a>
+            <a class="slider-item" href="26-Sparrow-Jan.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'January 2026', link_location:'archive_slider'});"><img src="26-Sparrow-Jan.png" alt=""><div class="si-label">Jan 2026</div></a>
+            <a class="slider-item" href="25-Sparrow-Oct.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'October 2025', link_location:'archive_slider'});"><img src="25-Sparrow-Oct.png" alt=""><div class="si-label">Oct 2025</div></a>
+            <a class="slider-item" href="25-Sparrow-July.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'July 2025', link_location:'archive_slider'});"><img src="25-Sparrow-July.jpg" alt=""><div class="si-label">Jul 2025</div></a>
+            <a class="slider-item" href="25-Sparrow-Jan.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'January 2025', link_location:'archive_slider'});"><img src="25-Sparrow-Jan.png" alt=""><div class="si-label">Jan 2025</div></a>
+            <a class="slider-item" href="24-Sparrow-July.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'July 2024', link_location:'archive_slider'});"><img src="24-Sparrow-Jul.png" alt=""><div class="si-label">Jul 2024</div></a>
+            <a class="slider-item" href="24-Sparrow-April.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'April 2024', link_location:'archive_slider'});"><img src="24-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2024</div></a>
+            <a class="slider-item" href="24-Sparrow-January.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'January 2024', link_location:'archive_slider'});"><img src="24-Sparrow-Apr.png" alt=""><div class="si-label">Jan 2024</div></a>
+            <a class="slider-item" href="23-Sparrow-April.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'April 2023', link_location:'archive_slider'});"><img src="23-Sparrow-Apr.png" alt=""><div class="si-label">Apr 2023</div></a>
+            <a class="slider-item" href="23-Sparrow-Jan.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'January 2023', link_location:'archive_slider'});"><img src="23-Sparrow-Jul.png" alt=""><div class="si-label">Jan 2023</div></a>
           </div>
         </div>
         <button class="slider-btn next" id="sliderNext">&#8594;</button>
@@ -224,12 +234,12 @@
         <img src="Working on laptop.jpeg" alt="Connect with LOA">
         <div class="card-photo-text">
           <ul class="connect-list">
-            <li><span class="clabel">Join</span><span><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank">Fill this form — easy!</a></span></li>
+            <li><span class="clabel">Join</span><span><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank" onclick="gtag('event','join_click',{link_location:'connect_list'});">Fill this form — easy!</a></span></li>
             <li><span class="clabel">Dues</span><span>Optional — $15/year, paid at the next LOA meeting.</span></li>
-            <li><span class="clabel">Email</span><span><a href="mailto:lincolnostomy@gmail.com">lincolnostomy@gmail.com</a></span></li>
-            <li><span class="clabel">Email Updates</span><span><a href="https://list-manage.us2.list-manage.com/subscribe?u=dafce3a6c19c04be4977647d5&id=027294c491" target="_blank">Sign up here</a></span></li>
+            <li><span class="clabel">Email</span><span><a href="mailto:lincolnostomy@gmail.com" onclick="gtag('event','email_click',{link_location:'connect_list'});">lincolnostomy@gmail.com</a></span></li>
+            <li><span class="clabel">Email Updates</span><span><a href="https://list-manage.us2.list-manage.com/subscribe?u=dafce3a6c19c04be4977647d5&id=027294c491" target="_blank" onclick="gtag('event','newsletter_signup_click',{link_location:'connect_list'});">Sign up here</a></span></li>
           </ul>
-          <a class="join-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank">Join LOA — It's Free to Start!</a>
+          <a class="join-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc9xJaY_4-1B4RkzugXlAT2d6HRjJmJNhA5ugc3yhVNllI78A/viewform" target="_blank" onclick="gtag('event','join_click',{link_location:'connect_hero_button'});">Join LOA — It's Free to Start!</a>
         </div>
       </div>
     </div>
@@ -250,9 +260,9 @@
         <img src="Nebraska Scene.jpeg" alt="Nebraska">
         <div class="card-photo-text">
           <p>Can you go back to work? Ride your bike? Will everyone figure out you've had surgery just by looking at you? View the latest products and techniques to help your journey as a Nebraskan with an ostomy.</p>
-          <p><a href="26-Sparrow-Apr.pdf" target="_blank">Read the latest Sparrow Newsletter &rarr;</a></p>
+          <p><a href="26-Sparrow-Apr.pdf" target="_blank" onclick="gtag('event','newsletter_download',{newsletter_issue:'April 2026', link_location:'education_card'});">Read the latest Sparrow Newsletter &rarr;</a></p>
           <br>
-          <p>📹 <a href="https://www.ostomy.org/ostomy-academy/" target="_blank">UOAA Ostomy Academy Videos</a></p>
+          <p>📹 <a href="https://www.ostomy.org/ostomy-academy/" target="_blank" onclick="gtag('event','outbound_click',{link_url:'https://www.ostomy.org/ostomy-academy/', link_text:'UOAA Ostomy Academy Videos'});">UOAA Ostomy Academy Videos</a></p>
         </div>
       </div>
     </div>
@@ -263,16 +273,16 @@
     <div class="sidebar-section">
       <h3>Sponsors &amp; Partners</h3>
       <div class="ad-slot">
-        <a href="https://ostomynebraska.com/lincoln/products/" target="_blank">
+        <a href="https://ostomynebraska.com/lincoln/products/" target="_blank" onclick="gtag('event','sponsor_click',{sponsor_name:'Colo Magic'});">
           <img src="colo-magic_ad-250x.jpg" alt="Colo Magic">
         </a>
       </div>
       <div class="ad-slot">
-        <a href="https://ostomynebraska.com/lincoln/products/" target="_blank">
+        <a href="https://ostomynebraska.com/lincoln/products/" target="_blank" onclick="gtag('event','sponsor_click',{sponsor_name:'Friendly Basket'});">
           <img src="Friendly basket.jpeg" alt="Friendly basket">
         </a>
       </div>
-      <a class="ad-placeholder-box" href="mailto:lincolnostomy@gmail.com?subject=Advertising Inquiry">
+      <a class="ad-placeholder-box" href="mailto:lincolnostomy@gmail.com?subject=Advertising Inquiry" onclick="gtag('event','advertise_inquiry_click');">
         <div class="ap-icon">📣</div>
         <div class="ap-title">Advertise Here</div>
         <div class="ap-sub">Reach the LOA community — contact us</div>
@@ -284,7 +294,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="http://www.ostomy.org/Home.html" target="_blank">
+      <a href="http://www.ostomy.org/Home.html" target="_blank" onclick="gtag('event','outbound_click',{link_url:'http://www.ostomy.org/Home.html', link_text:'UOAA logo'});">
         <img src="Logo.png" alt="LOA Logo">
       </a>
       <p>Proud affiliate of the United Ostomy Association of America</p>
@@ -299,13 +309,13 @@
     </div>
     <div class="footer-links">
       <h4>Contact</h4>
-      <a href="mailto:lincolnostomy@gmail.com">lincolnostomy@gmail.com</a>
-      <a href="https://list-manage.us2.list-manage.com/subscribe?u=dafce3a6c19c04be4977647d5&id=027294c491" target="_blank">Email Updates</a>
+      <a href="mailto:lincolnostomy@gmail.com" onclick="gtag('event','email_click',{link_location:'footer'});">lincolnostomy@gmail.com</a>
+      <a href="https://list-manage.us2.list-manage.com/subscribe?u=dafce3a6c19c04be4977647d5&id=027294c491" target="_blank" onclick="gtag('event','newsletter_signup_click',{link_location:'footer'});">Email Updates</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>&copy; 2026 Lincoln Ostomy Association</span>
-    <span>Questions? <a href="mailto:lincolnostomy@gmail.com">lincolnostomy@gmail.com</a></span>
+    <span>Questions? <a href="mailto:lincolnostomy@gmail.com" onclick="gtag('event','email_click',{link_location:'footer_bottom'});">lincolnostomy@gmail.com</a></span>
   </div>
 </footer>
 
