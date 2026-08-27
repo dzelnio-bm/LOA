@@ -1,5 +1,4 @@
 const siteContent = {
-
   organization: {
     name: "Lincoln Ostomy Association",
     abbreviation: "LOA",
@@ -22,15 +21,14 @@ const siteContent = {
   company: "",
   details: "Special Ostomy Panel"
 },
-
   newsletter: {
     label: "NEW SPARROW NEWSLETTER",
-    issue: "April 2026",
-    file: "26-Sparrow-Apr.pdf",
-    thumb: "26-Sparrow-Apr.png"
+    issue: "Summer 2026",
+    file: "26-Sparrow-Summer.pdf",
+    thumb: "26_Sparrow_Summer.png"
   },
-
   newsletterArchive: [
+    { issue: "Summer 2026",  thumb: "26_Sparrow_Summer.png", file: "26-Sparrow-Summer.pdf" },
     { issue: "April 2026",   thumb: "26-Sparrow-Apr.png",   file: "26-Sparrow-Apr.pdf" },
     { issue: "January 2026", thumb: "26-Sparrow-Jan.png",   file: "26-Sparrow-Jan.pdf" },
     { issue: "October 2025", thumb: "25-Sparrow-Oct.png",   file: "25-Sparrow-Oct.pdf" },
@@ -45,7 +43,6 @@ const siteContent = {
     { issue: "April 2023",   thumb: "23-Sparrow-Apr.png",   file: "23-Sparrow-April.pdf" },
     { issue: "January 2023", thumb: "23-Sparrow-Jul.png",   file: "23-Sparrow-Jan.pdf" }
   ],
-
   hero: {
     tagline: "We'll walk with you through your ostomy journey.",
     body: "Lincoln Ostomy Association provides tools for ostomates. According to Mayo Clinic, it takes time to be comfortable with an ostomy — connecting with community can help. The United Ostomy Association estimates 500–800,000 people have a stoma in the U.S. and 120,000 new surgeries are performed each year.",
@@ -56,7 +53,6 @@ const siteContent = {
       "Get tips to help you adapt to life with an ostomy."
     ]
   },
-
   connect: {
     heading: "Connect & Join",
     image: "Working on laptop.jpeg",
@@ -68,14 +64,12 @@ const siteContent = {
       { label: "Email Updates",text: "Sign up here",                url: "http://eepurl.com/hBBBmf" }
     ]
   },
-
   products: {
     heading: "Ostomy Products & Services",
     intro: "Lincoln is blessed with great home health suppliers and medical professionals. Some accept Medicare — best to call ahead. Shop local, but also consider online companies with everything from clothing to stoma care.",
     image: "doctor chart.jpeg",
     url: "https://ostomynebraska.com/lincoln/products/"
   },
-
   education: {
     heading: "Ostomy Education",
     intro: "Can you go back to work? Ride your bike? Will everyone figure out you've had surgery just by looking at you? View the latest products and techniques to help your journey as a Nebraskan with an ostomy.",
@@ -84,7 +78,6 @@ const siteContent = {
     videoUrl: "https://www.ostomy.org/ostomy-academy/",
     videoLabel: "UOAA Ostomy Academy Videos"
   },
-
   ads: [
     {
       id: 1,
@@ -110,7 +103,6 @@ const siteContent = {
       placeholderSub: "Reach the LOA community — contact us"
     }
   ],
-
   footer: {
     affiliate: "Proud affiliate of the United Ostomy Association of America",
     affiliateUrl: "http://www.ostomy.org/Home.html",
@@ -124,5 +116,4 @@ const siteContent = {
       { label: "Learn",              url: "https://ostomynebraska.com/lincoln/publications/" }
     ]
   }
-
 };
